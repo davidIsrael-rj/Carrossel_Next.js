@@ -1,6 +1,10 @@
+import Carrosel3d from "@/template/carrossel/carrossel3d";
 
 export default function Home() {
   return (
-   <div>Carrossel</div>
+    <div>Carrossel
+
+      <Carrosel3d />
+    </div>
   );
 }
