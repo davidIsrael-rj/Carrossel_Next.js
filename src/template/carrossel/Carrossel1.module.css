@@ -1,0 +1,81 @@
+/* Carrossel */
+
+.carrossel {
+  position: relative;
+  width: 800px;
+  height: 200px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.carrosselItens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carrosselItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carrosselItem.active {
+  display: block;
+}
+
+.carrosselItem.active {
+  opacity: 1;
+}
+
+
+.carrosselAnterior, .carrosselProximo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.carrosselAnterior {
+  left: 10px;
+}
+
+.carrosselProximo {
+  right: 10px;
+}
+
+.carrosselPaginacao {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carrosselPagina {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carrosselPagina.active {
+  background-color: #333;
+}
+
+.carrosselItemImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
