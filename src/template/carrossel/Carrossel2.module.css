@@ -1,0 +1,23 @@
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.carrosselItens {
+  display: flex;
+  width: fit-content;
+  transition: transform 0.5s linear;
+}
+
+.carrosselItem {
+  width: 25%;
+  flex-shrink: 0;
+}
+
+.imag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
