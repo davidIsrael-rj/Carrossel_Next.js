@@ -1,0 +1,28 @@
+.carrossel {
+  width: 100%;            
+  overflow: hidden;       
+  background: #111;
+}
+
+.track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: mover linear infinite; /* animação contínua */
+  width: max-content;
+
+}
+
+.item {
+  flex: 0 0 auto;          /* mantém largura do item */
+  margin-right: 0px;      /* espaçamento opcional entre imagens */
+}
+
+/* animação contínua do carrossel */
+@keyframes mover {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%); /* metade da track (porque duplicamos as imagens) */
+  }
+}
