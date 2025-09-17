@@ -16,7 +16,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/effect-fade';
+
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectFade, Autoplay, Controller, Mousewheel, Pagination, Navigation } from 'swiper/modules'
+
+
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -57,9 +62,25 @@ export default function Carrossel5() {
         <div className={styles.container}>
             <h1 className={styles.title}>Carrossel5 com Swiper</h1>
             <Swiper
-                slidesPerView={slidePerView}
-                pagination={{ clickable: true }}
-                navigation
+                // modules={[EffectFade, Controller, Mousewheel, Autoplay, Pagination, Navigation]}
+                modules={[Autoplay, Navigation]}
+                // effect='fade'
+                loop={true}
+                spaceBetween={0} // espaço entre imagens
+                speed={3000}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false, // mantém rodando mesmo se o usuário clicar/arrastar
+                    // pauseOnMouseEnter: true // pausa quando o mouse passa em cima
+
+
+                }}
+                freeMode={true}          // habilita o modo livre
+                freeModeMomentum={false} // remove aquela paradinha ao final do movimento
+                slidesPerView={3}
+            // pagination={{ clickable: true }}
+            // navigation
+
             >
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
