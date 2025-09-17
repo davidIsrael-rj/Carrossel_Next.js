@@ -72,6 +72,7 @@ export default function Carrossel5() {
                     delay: 0,
                     disableOnInteraction: false, // mantém rodando mesmo se o usuário clicar/arrastar
                     // pauseOnMouseEnter: true // pausa quando o mouse passa em cima
+                    reverseDirection: true,
 
 
                 }}
